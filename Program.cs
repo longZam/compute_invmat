@@ -191,6 +191,12 @@ if (sd != sg)
     return;
 }
 
+if (!sd)
+{
+    AnsiConsole.WriteLine("두 방법의 결과가 동일합니다.");
+    return;
+}
+
 // 1e-4 오차 범위 
 AnsiConsole.WriteLine(Equals(byDeterminant, byGaussJordan, 0.001f) ?
 "두 방법의 결과가 동일합니다." :
